@@ -12,9 +12,14 @@
 		D36434A21C01E179006931F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36434A01C01E179006931F4 /* Main.storyboard */; };
 		D36434A41C01E179006931F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36434A31C01E179006931F4 /* Assets.xcassets */; };
 		D36434A71C01E179006931F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36434A51C01E179006931F4 /* LaunchScreen.storyboard */; };
+		D36434B51C01E423006931F4 /* XBNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36434B41C01E423006931F4 /* XBNote.swift */; };
+		F8DA9A45528B1A04C1F484AA /* Pods_XiaoBai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E7B77AF8C8344CA20153A6 /* Pods_XiaoBai.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17D17DBA9968E53DE7E109CE /* Pods-XiaoBai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoBai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoBai/Pods-XiaoBai.debug.xcconfig"; sourceTree = "<group>"; };
+		77E7B77AF8C8344CA20153A6 /* Pods_XiaoBai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiaoBai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E2B3C8E160E545E586EED1 /* Pods-XiaoBai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoBai.release.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoBai/Pods-XiaoBai.release.xcconfig"; sourceTree = "<group>"; };
 		D36434991C01E179006931F4 /* XiaoBai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiaoBai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364349C1C01E179006931F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D364349E1C01E179006931F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		D36434A31C01E179006931F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36434A61C01E179006931F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36434A81C01E179006931F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D36434B41C01E423006931F4 /* XBNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DA9A45528B1A04C1F484AA /* Pods_XiaoBai.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37527B4D8DAE8C5F9D22B575 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17D17DBA9968E53DE7E109CE /* Pods-XiaoBai.debug.xcconfig */,
+				A8E2B3C8E160E545E586EED1 /* Pods-XiaoBai.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84280846C334E7A32DBBB85F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77E7B77AF8C8344CA20153A6 /* Pods_XiaoBai.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D36434901C01E179006931F4 = {
 			isa = PBXGroup;
 			children = (
 				D364349B1C01E179006931F4 /* XiaoBai */,
 				D364349A1C01E179006931F4 /* Products */,
+				37527B4D8DAE8C5F9D22B575 /* Pods */,
+				84280846C334E7A32DBBB85F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,7 @@
 			children = (
 				D364349C1C01E179006931F4 /* AppDelegate.swift */,
 				D364349E1C01E179006931F4 /* ViewController.swift */,
+				D36434B41C01E423006931F4 /* XBNote.swift */,
 				D36434A01C01E179006931F4 /* Main.storyboard */,
 				D36434A31C01E179006931F4 /* Assets.xcassets */,
 				D36434A51C01E179006931F4 /* LaunchScreen.storyboard */,
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D36434AB1C01E179006931F4 /* Build configuration list for PBXNativeTarget "XiaoBai" */;
 			buildPhases = (
+				091963BA5FE076F88ECA9D16 /* Check Pods Manifest.lock */,
 				D36434951C01E179006931F4 /* Sources */,
 				D36434961C01E179006931F4 /* Frameworks */,
 				D36434971C01E179006931F4 /* Resources */,
+				C52CF1974C6F0D623B228D83 /* Embed Pods Frameworks */,
+				27583D453306C096FF333F9A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -90,6 +120,7 @@
 		D36434911C01E179006931F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XB;
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = com.wy;
@@ -130,6 +161,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		091963BA5FE076F88ECA9D16 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		27583D453306C096FF333F9A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XiaoBai/Pods-XiaoBai-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C52CF1974C6F0D623B228D83 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XiaoBai/Pods-XiaoBai-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D36434951C01E179006931F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +216,7 @@
 			files = (
 				D364349F1C01E179006931F4 /* ViewController.swift in Sources */,
 				D364349D1C01E179006931F4 /* AppDelegate.swift in Sources */,
+				D36434B51C01E423006931F4 /* XBNote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +325,7 @@
 		};
 		D36434AC1C01E179006931F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17D17DBA9968E53DE7E109CE /* Pods-XiaoBai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XiaoBai/Info.plist;
@@ -256,6 +337,7 @@
 		};
 		D36434AD1C01E179006931F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8E2B3C8E160E545E586EED1 /* Pods-XiaoBai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XiaoBai/Info.plist;
@@ -284,6 +366,7 @@
 				D36434AD1C01E179006931F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
