@@ -9,7 +9,7 @@
 import UIKit
 
 class XBNote {
-    
+
     var date : NSDate = NSDate.init()
     
 //    init() {

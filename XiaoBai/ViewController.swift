@@ -11,28 +11,25 @@ import SnapKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var segment: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let label = UILabel.init()
-        label.backgroundColor = UIColor.yellowColor()
-        self.view.addSubview(label)
-        label.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(self.view).offset(15)
-            make.left.equalTo(self.view).offset(15)
-        }
-        
-        
-        let note = XBNote.init()
-        note.date = NSDate.init()
-        print(note.date)
-        label.text = note.date.description
+        edgesForExtendedLayout = .None;
+
+        addChildViewControllers([XBBudgetViewController(), XBExpensesViewController(), XBIncomeViewController()])
+        segment.selectedSegmentIndex = NSUserDefaults.standardUserDefaults().integerForKey(segmentIndex)
+        segmentChange(nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func segmentChange(sender: UISegmentedControl?) {
+        switchToChildControllerAtIndex(UInt(segment.selectedSegmentIndex), completion:nil)
     }
-
-
+    
+    @IBAction func moreAction(sender: AnyObject) {
+        
+    }
+    
 }
 

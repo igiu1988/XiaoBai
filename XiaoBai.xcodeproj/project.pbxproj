@@ -13,6 +13,16 @@
 		D36434A41C01E179006931F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36434A31C01E179006931F4 /* Assets.xcassets */; };
 		D36434A71C01E179006931F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36434A51C01E179006931F4 /* LaunchScreen.storyboard */; };
 		D36434B51C01E423006931F4 /* XBNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36434B41C01E423006931F4 /* XBNote.swift */; };
+		D36E67311C0B3C82006A32C5 /* XBBudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E67301C0B3C82006A32C5 /* XBBudgetCell.swift */; };
+		D36E67331C0E7AB5006A32C5 /* XBWidthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E67321C0E7AB5006A32C5 /* XBWidthManager.swift */; };
+		D36E67361C108C1A006A32C5 /* XBDragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E67351C108C1A006A32C5 /* XBDragView.swift */; };
+		D38253F11C09661A00E26E6F /* UIViewController+ChildControllerSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D38253F01C09661A00E26E6F /* UIViewController+ChildControllerSwitch.m */; };
+		D38253F41C09674E00E26E6F /* XBBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253F31C09674E00E26E6F /* XBBudgetViewController.swift */; };
+		D38253F61C09681E00E26E6F /* XBExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253F51C09681E00E26E6F /* XBExpensesViewController.swift */; };
+		D38253F81C09683800E26E6F /* XBIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253F71C09683800E26E6F /* XBIncomeViewController.swift */; };
+		D38253FA1C09715B00E26E6F /* XBConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253F91C09715B00E26E6F /* XBConstant.swift */; };
+		D38253FC1C097EFF00E26E6F /* XBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253FB1C097EFF00E26E6F /* XBTableViewController.swift */; };
+		D38253FE1C097F6200E26E6F /* XBTableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253FD1C097F6200E26E6F /* XBTableViewRow.swift */; };
 		F8DA9A45528B1A04C1F484AA /* Pods_XiaoBai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E7B77AF8C8344CA20153A6 /* Pods_XiaoBai.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +38,18 @@
 		D36434A61C01E179006931F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36434A81C01E179006931F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D36434B41C01E423006931F4 /* XBNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBNote.swift; sourceTree = "<group>"; };
+		D36E67301C0B3C82006A32C5 /* XBBudgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBBudgetCell.swift; sourceTree = "<group>"; };
+		D36E67321C0E7AB5006A32C5 /* XBWidthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBWidthManager.swift; sourceTree = "<group>"; };
+		D36E67351C108C1A006A32C5 /* XBDragView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBDragView.swift; sourceTree = "<group>"; };
+		D38253EE1C09570100E26E6F /* XiaoBai-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XiaoBai-Bridging-Header.h"; sourceTree = "<group>"; };
+		D38253EF1C09661A00E26E6F /* UIViewController+ChildControllerSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ChildControllerSwitch.h"; sourceTree = "<group>"; };
+		D38253F01C09661A00E26E6F /* UIViewController+ChildControllerSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ChildControllerSwitch.m"; sourceTree = "<group>"; };
+		D38253F31C09674E00E26E6F /* XBBudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBBudgetViewController.swift; sourceTree = "<group>"; };
+		D38253F51C09681E00E26E6F /* XBExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBExpensesViewController.swift; sourceTree = "<group>"; };
+		D38253F71C09683800E26E6F /* XBIncomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBIncomeViewController.swift; sourceTree = "<group>"; };
+		D38253F91C09715B00E26E6F /* XBConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBConstant.swift; sourceTree = "<group>"; };
+		D38253FB1C097EFF00E26E6F /* XBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTableViewController.swift; sourceTree = "<group>"; };
+		D38253FD1C097F6200E26E6F /* XBTableViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTableViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +102,67 @@
 		D364349B1C01E179006931F4 /* XiaoBai */ = {
 			isa = PBXGroup;
 			children = (
-				D364349C1C01E179006931F4 /* AppDelegate.swift */,
-				D364349E1C01E179006931F4 /* ViewController.swift */,
-				D36434B41C01E423006931F4 /* XBNote.swift */,
+				D38253E91C09563200E26E6F /* Source */,
+				D38253E81C09562100E26E6F /* Support Files */,
+				D38253E31C0955B800E26E6F /* 3rd */,
+				D38253F21C09662200E26E6F /* Category */,
+			);
+			path = XiaoBai;
+			sourceTree = "<group>";
+		};
+		D36E67341C108C07006A32C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D38253FD1C097F6200E26E6F /* XBTableViewRow.swift */,
+				D36E67301C0B3C82006A32C5 /* XBBudgetCell.swift */,
+				D36E67351C108C1A006A32C5 /* XBDragView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D38253E31C0955B800E26E6F /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		D38253E81C09562100E26E6F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				D36434A01C01E179006931F4 /* Main.storyboard */,
 				D36434A31C01E179006931F4 /* Assets.xcassets */,
 				D36434A51C01E179006931F4 /* LaunchScreen.storyboard */,
 				D36434A81C01E179006931F4 /* Info.plist */,
+				D38253EE1C09570100E26E6F /* XiaoBai-Bridging-Header.h */,
 			);
-			path = XiaoBai;
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		D38253E91C09563200E26E6F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D36E67341C108C07006A32C5 /* Views */,
+				D364349C1C01E179006931F4 /* AppDelegate.swift */,
+				D364349E1C01E179006931F4 /* ViewController.swift */,
+				D38253F31C09674E00E26E6F /* XBBudgetViewController.swift */,
+				D38253F51C09681E00E26E6F /* XBExpensesViewController.swift */,
+				D38253F71C09683800E26E6F /* XBIncomeViewController.swift */,
+				D38253FB1C097EFF00E26E6F /* XBTableViewController.swift */,
+				D36434B41C01E423006931F4 /* XBNote.swift */,
+				D38253F91C09715B00E26E6F /* XBConstant.swift */,
+				D36E67321C0E7AB5006A32C5 /* XBWidthManager.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		D38253F21C09662200E26E6F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D38253EF1C09661A00E26E6F /* UIViewController+ChildControllerSwitch.h */,
+				D38253F01C09661A00E26E6F /* UIViewController+ChildControllerSwitch.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +288,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36E67331C0E7AB5006A32C5 /* XBWidthManager.swift in Sources */,
+				D38253FE1C097F6200E26E6F /* XBTableViewRow.swift in Sources */,
 				D364349F1C01E179006931F4 /* ViewController.swift in Sources */,
+				D38253FC1C097EFF00E26E6F /* XBTableViewController.swift in Sources */,
+				D38253F61C09681E00E26E6F /* XBExpensesViewController.swift in Sources */,
+				D38253F81C09683800E26E6F /* XBIncomeViewController.swift in Sources */,
 				D364349D1C01E179006931F4 /* AppDelegate.swift in Sources */,
+				D36E67311C0B3C82006A32C5 /* XBBudgetCell.swift in Sources */,
+				D38253F11C09661A00E26E6F /* UIViewController+ChildControllerSwitch.m in Sources */,
+				D36E67361C108C1A006A32C5 /* XBDragView.swift in Sources */,
+				D38253F41C09674E00E26E6F /* XBBudgetViewController.swift in Sources */,
 				D36434B51C01E423006931F4 /* XBNote.swift in Sources */,
+				D38253FA1C09715B00E26E6F /* XBConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,10 +412,15 @@
 			baseConfigurationReference = 17D17DBA9968E53DE7E109CE /* Pods-XiaoBai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = XiaoBai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = wy.XiaoBai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/XiaoBai/XiaoBai-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -340,10 +429,15 @@
 			baseConfigurationReference = A8E2B3C8E160E545E586EED1 /* Pods-XiaoBai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = XiaoBai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = wy.XiaoBai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/XiaoBai/XiaoBai-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
