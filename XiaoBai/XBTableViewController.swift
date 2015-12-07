@@ -8,26 +8,20 @@
 
 import UIKit
 
-class XBTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
+class XBTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableHeaderViewDelegate  {
     var tableView = UITableView()
-    private var dragingView: XBDragView!
-    private var headerView = UIView()
-    把 dragViews 做到一个固定的 view 上，而不是一个 section Header
-    var dragViews = [XBDragView]()
-    // error
+    var headerView = TableHeaderView(frame: CGRectZero)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.redColor()
-        
-        let pan = UIPanGestureRecognizer.init(target: self, action: "panAction:")
-        pan.delegate = self
-        view.addGestureRecognizer(pan)
-        
+
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
         
         view.addSubview(headerView)
+        headerView.delegate = self
         headerView.backgroundColor = UIColor.purpleColor()
         headerView.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(0)
@@ -42,38 +36,13 @@ class XBTableViewController: UIViewController, UITableViewDelegate, UITableViewD
             make.bottom.equalTo(0)
         }
     }
-    
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        let point = touch.locationInView(view)
 
-        for dragView in dragViews {
-            if CGRectContainsPoint(dragView.frame, point) {
-                dragingView = dragView
-                dragingView.currentOrigin = dragingView.frame.origin
-                return true
-            }
+    // controller只改变当前invisible的cell，
+    func rowWidthsChanged(rowWidth: [CGFloat]) {
+        for cell in tableView.visibleCells as! [XBTableViewRow] {
+            cell.labelWidths = rowWidth
         }
-        
-        return false        
     }
-    
-    func panAction(pan: UIPanGestureRecognizer) {
-        let offset = pan.translationInView(view)
-        
-        dragingView.snp_updateConstraints { (make) -> Void in
-            make.left.equalTo(dragingView.currentOrigin.x + offset.x)
-        }
-        
-        tableView.reloadData()
-//        print("\(pan.translationInView(view))")
-    }
-    
-     // MARK: - Width
-//     TODO: 下面这两个是 delegate
-//     cellCanShrink -> Bool
-//     cellCanExpand -> Bool
-    
-    
     
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -84,6 +53,10 @@ class XBTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 30;
     }
 }
 

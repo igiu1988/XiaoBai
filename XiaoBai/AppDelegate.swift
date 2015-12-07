@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
 
+    
     func storeSegmentIndex() {
         let navigation = window!.rootViewController as! UINavigationController
         

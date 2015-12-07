@@ -9,6 +9,5 @@
 import UIKit
 
 class XBDragView: UIView {
-    var currentOrigin: CGPoint!
     
 }

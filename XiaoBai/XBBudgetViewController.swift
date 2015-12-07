@@ -9,63 +9,52 @@
 import UIKit
 
 class XBBudgetViewController: XBTableViewController, XBTableViewRowDelegate {
+    let headerTitles = ["日期", "描述", "类别", "总额"];
 
-    var timeDrag = XBDragView()
-    var descDrag = XBDragView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.redColor()
         
         tableView.registerClass(XBBudgetCell.classForCoder(), forCellReuseIdentifier: "defaultCell")
- 必需有一个能管理 dragView 的东西，我只需要调用一个方法，就可以添加一个 dragView，约束自动添加，从缓存中取出 正确的位置
-        timeDrag.backgroundColor = UIColor.redColor()
-        view.addSubview(timeDrag)
-        
-        dragViews.append(timeDrag)
-        
-        descDrag.backgroundColor = UIColor.greenColor()
-        view.addSubview(descDrag)
-        
-        dragViews.append(descDrag)
-    }
-    
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
 
-        timeDrag.snp_remakeConstraints { (make) -> Void in
-            make.top.equalTo(0);
-            make.left.equalTo(30)
-            make.size.equalTo(CGSizeMake(40, 30))
-        }
-        
-        descDrag.snp_remakeConstraints { (make) -> Void in
-            make.top.equalTo(0);
-            make.left.equalTo(100)
-            make.size.equalTo(CGSizeMake(40, 30))
-        }
-        
+        self.headerView.setSegmentTitles(headerTitles)
     }
+
 
     // MARK: - UITableViewDataSource
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("defaultCell", forIndexPath: indexPath) as! XBBudgetCell
-        cell.timeLabelWidth = Float(timeDrag.center.x)
-        cell.descLabelWidth = Float(descDrag.center.x - timeDrag.center.x)
-        cell.typeLabelWidth = 30
-        cell.moneyLabelWidth = 30
+        cell.labelWidths = headerView.persistenceRowWidths
         cell.delegate = self
         return cell
     }
-    
+
+    // TODO: 使用持久化存储取得行数
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
     
     func labelDidTap(label: UILabel, type: XBInputType) {
-        print(type)
-        label.text? = "wangyang"
+        switch type {
+        case .Time:
+            // TODO: 弹出时间选择view
+            print(type)
+            label.text? = "time"
+        case .Text:
+            // TODO: 输入文字
+            print(type)
+            label.text? = "text"
+        case .Category:
+            // TODO: picker 选择类别
+            print(type)
+            label.text? = "category"
+        case .Money:
+            // TODO: 输入花销金额
+            print(type)
+            label.text? = "money"
+        }
+
     }
 
 }

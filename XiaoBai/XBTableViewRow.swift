@@ -16,9 +16,20 @@ protocol XBTableViewRowDelegate {
     func labelDidTap(label: UILabel, type: XBInputType)
 }
 
+
+
 class XBTableViewRow: UITableViewCell {
     var delegate: XBTableViewRowDelegate?
-    
+
+    // 改变 labelWidths 会影响每个label的宽度
+    var labelWidths = [CGFloat]() {
+        didSet {
+            updateLabelConstraints()
+        }
+    }
+
+    var labels = [UILabel]()
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         loadView()
@@ -38,16 +49,36 @@ class XBTableViewRow: UITableViewCell {
      添加一个可以点击的 label，并添加对应的点击手势
      :param: selector 点击手势响应的方法
      
-     :returns: label 和 label 的宽约束
+     :returns: label
      */
     func addLabel(selector: Selector) -> UILabel {
         let label = UILabel()
+        label.font = UIFont.systemFontOfSize(12)
+        label.numberOfLines = 2
+        
         contentView.addSubview(label)
         label.userInteractionEnabled = true
         let tap = UITapGestureRecognizer.init(target: self, action: selector)
         label .addGestureRecognizer(tap)
-        
+
+        labels.append(label)
+
         return label
+    }
+
+    func updateLabelConstraints() {
+        for var i = 0; i < labels.count; ++i {
+            labels[i].snp_remakeConstraints { (make) -> Void in
+                if i == 0 {
+                    make.left.equalTo(0)
+                } else {
+                    make.left.equalTo(labels[i - 1].snp_right).offset(0)
+                }
+                make.top.equalTo(0)
+                make.bottom.equalTo(0)
+                make.width.equalTo(labelWidths[i])
+            }
+        }
     }
 
     func timeTapAction(gesture: UITapGestureRecognizer) {
