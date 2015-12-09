@@ -35,26 +35,10 @@ class XBBudgetViewController: XBTableViewController, XBTableViewRowDelegate {
     }
     
     
-    func labelDidTap(label: UILabel, type: XBInputType) {
-        switch type {
-        case .Time:
-            // TODO: 弹出时间选择view
-            print(type)
-            label.text? = "time"
-        case .Text:
-            // TODO: 输入文字
-            print(type)
-            label.text? = "text"
-        case .Category:
-            // TODO: picker 选择类别
-            print(type)
-            label.text? = "category"
-        case .Money:
-            // TODO: 输入花销金额
-            print(type)
-            label.text? = "money"
-        }
-
+    
+    
+    override func requirePersistenceRowLefts() -> [CGFloat] {
+        return [50.0, 180.0, 230.0, 280.0];
     }
 
 }

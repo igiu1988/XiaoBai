@@ -20,7 +20,7 @@ protocol XBTableViewRowDelegate {
 
 class XBTableViewRow: UITableViewCell {
     var delegate: XBTableViewRowDelegate?
-
+    
     // 改变 labelWidths 会影响每个label的宽度
     var labelWidths = [CGFloat]() {
         didSet {
@@ -30,6 +30,8 @@ class XBTableViewRow: UITableViewCell {
 
     var labels = [UILabel]()
 
+
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         loadView()

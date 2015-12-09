@@ -11,9 +11,10 @@ import UIKit
 
 protocol TableHeaderViewDelegate : NSObjectProtocol {
     func rowWidthsChanged(rowWidth: [CGFloat]);
+    func requirePersistenceRowLefts() -> [CGFloat];
 }
+
 // 因为每个controller有不同的lefts，widths，所以这部分要在controller中实现。如何实现呢。。这个有点不会了，要暴露出一个协议。requirePersistenceRowWidths，有了宽度，就可以计算出对应的left
-// TODO: 在这里添加一个segmentControl，拖动d时，相关的segment宽度发生变化
 class TableHeaderView: UIView, UIGestureRecognizerDelegate {
     private var dragingIndex: Int!
     var dragViews = [XBDragView]()
@@ -23,23 +24,24 @@ class TableHeaderView: UIView, UIGestureRecognizerDelegate {
 
     let dragViewSize = CGSizeMake(40, 30)
     // TODO: persistenceLefts应该从一个持久化的类中取出
-    private var persistenceLefts: [CGFloat] = [50.0, 110.0, 180.0, 230.0]
+    private var persistenceLefts: [CGFloat]!
     private var preLefts: [CGFloat]!
 
     // TODO: persistenceRowWidths应该从一个持久化的类中取出
     var persistenceRowWidths: [CGFloat] = [CGFloat]()
     private var preRowWidths: [CGFloat]!
 
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
+    convenience init(delegate: TableHeaderViewDelegate) {
+        self.init()
+        self.delegate = delegate
+        
         let pan = UIPanGestureRecognizer.init(target: self, action: "panAction:")
         pan.delegate = self
         self.addGestureRecognizer(pan)
-
+        
+        persistenceLefts = self.delegate?.requirePersistenceRowLefts();
         preLefts = persistenceLefts;
-
+        
         var preCenter: CGFloat?
         let halfWidth = dragViewSize.width / 2
         for x in persistenceLefts{
@@ -50,14 +52,40 @@ class TableHeaderView: UIView, UIGestureRecognizerDelegate {
             }
             preCenter = x + halfWidth
         }
-
+        
         preRowWidths = persistenceRowWidths
     }
 
-    required init?(coder aDecoder: NSCoder) {
-
-        super.init(coder: aDecoder)
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//
+//        let pan = UIPanGestureRecognizer.init(target: self, action: "panAction:")
+//        pan.delegate = self
+//        self.addGestureRecognizer(pan)
+//
+//        persistenceLefts = delegate?.requirePersistenceRowLefts();
+//        preLefts = persistenceLefts;
+//
+//        var preCenter: CGFloat?
+//        let halfWidth = dragViewSize.width / 2
+//        for x in persistenceLefts{
+//            if preCenter == nil {
+//                persistenceRowWidths.append(x + halfWidth)
+//            }else{
+//                persistenceRowWidths.append(x + halfWidth - preCenter!)
+//            }
+//            preCenter = x + halfWidth
+//        }
+//
+//        preRowWidths = persistenceRowWidths
+//    }
+//    
+//    
+//
+//    required init?(coder aDecoder: NSCoder) {
+//
+//        super.init(coder: aDecoder)
+//    }
 
     func setSegmentTitles(titles: [String]) {
 
