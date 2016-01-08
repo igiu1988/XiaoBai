@@ -26,6 +26,7 @@
 		D38253FA1C09715B00E26E6F /* XBConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253F91C09715B00E26E6F /* XBConstant.swift */; };
 		D38253FC1C097EFF00E26E6F /* XBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253FB1C097EFF00E26E6F /* XBTableViewController.swift */; };
 		D38253FE1C097F6200E26E6F /* XBTableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253FD1C097F6200E26E6F /* XBTableViewRow.swift */; };
+		D399F9441C2E379400237D75 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D399F9431C2E379400237D75 /* CoreMotion.framework */; };
 		F8DA9A45528B1A04C1F484AA /* Pods_XiaoBai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E7B77AF8C8344CA20153A6 /* Pods_XiaoBai.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		D38253F91C09715B00E26E6F /* XBConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBConstant.swift; sourceTree = "<group>"; };
 		D38253FB1C097EFF00E26E6F /* XBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTableViewController.swift; sourceTree = "<group>"; };
 		D38253FD1C097F6200E26E6F /* XBTableViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTableViewRow.swift; sourceTree = "<group>"; };
+		D399F9431C2E379400237D75 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D399F9441C2E379400237D75 /* CoreMotion.framework in Frameworks */,
 				F8DA9A45528B1A04C1F484AA /* Pods_XiaoBai.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +85,7 @@
 		84280846C334E7A32DBBB85F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D399F9431C2E379400237D75 /* CoreMotion.framework */,
 				77E7B77AF8C8344CA20153A6 /* Pods_XiaoBai.framework */,
 			);
 			name = Frameworks;
