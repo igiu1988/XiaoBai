@@ -7,20 +7,31 @@
 //
 
 import UIKit
+import CoreMotion
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let motionManager = CMMotionManager()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
         return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
         storeSegmentIndex()
-        
+        motionManager.stopDeviceMotionUpdates()
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        motionManager.deviceMotionUpdateInterval = NSTimeInterval(1.0/5.0)
+        motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (deviceMotion : CMDeviceMotion?, error: NSError?) -> Void in
+            
+            print("roll \(deviceMotion?.attitude.roll), pitch \(deviceMotion?.attitude.pitch), yaw \(deviceMotion?.attitude.yaw)")
+            
+        }
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
