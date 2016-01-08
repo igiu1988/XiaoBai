@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var segment: UISegmentedControl!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         edgesForExtendedLayout = .None;
@@ -21,7 +21,9 @@ class ViewController: UIViewController {
         addChildViewControllers([XBBudgetViewController(), XBExpensesViewController(), XBIncomeViewController()])
         segment.selectedSegmentIndex = NSUserDefaults.standardUserDefaults().integerForKey(segmentIndex)
         segmentChange(nil)
+        
     }
+    
 
     @IBAction func segmentChange(sender: UISegmentedControl?) {
         switchToChildControllerAtIndex(UInt(segment.selectedSegmentIndex), completion:nil)
@@ -30,6 +32,10 @@ class ViewController: UIViewController {
     @IBAction func moreAction(sender: AnyObject) {
         
     }
+    @IBAction func startAction(sender: AnyObject) {
+        
+    }
     
+    @IBAction func endAction(sender: AnyObject) {
+    }
 }
-
