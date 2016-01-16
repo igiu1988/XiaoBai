@@ -1,5 +1,10 @@
+
+# AppCode
+.idea/workspace.xml
+.idea/*.iws
+.idea/tasks.xml
+
 # Xcode
-#
 build/
 *.pbxuser
 Pods/
