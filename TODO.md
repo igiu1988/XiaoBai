@@ -4,3 +4,9 @@
 * 在支出中可以排序
 * 过滤与排序可以混合使用
 * 有借有还：当月的借款
+
+
+### 参考 
+* http://nscookbook.com/2013/03/ios-programming-recipe-19-using-core-motion-to-access-gyro-and-accelerometer/
+* http://justsee.iteye.com/blog/1933099
+* Apple Doc. https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMMotionManager_Class/123456
