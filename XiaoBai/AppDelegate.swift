@@ -9,48 +9,44 @@
 import UIKit
 import CoreMotion
 
+
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+
+class AppDelegate: UIResponder, UIApplicationDelegate, RollPhoneDetectorDelegate{
 
     var window: UIWindow?
-    let motionManager = CMMotionManager()
+    let detector = RollPhoneDetector()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+        
+        detector.delegate = self;
+        
         return true
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
         storeSegmentIndex()
-        motionManager.stopDeviceMotionUpdates()
+        detector.stopMotionUpdate()
     }
-    
+
     func applicationDidBecomeActive(application: UIApplication) {
-        motionManager.deviceMotionUpdateInterval = NSTimeInterval(1.0/5.0)
-        motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (deviceMotion : CMDeviceMotion?, error: NSError?) -> Void in
-            
-            print("roll \(deviceMotion?.attitude.roll), pitch \(deviceMotion?.attitude.pitch), yaw \(deviceMotion?.attitude.yaw)")
-            
-        }
-    }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        detector.startMotionUpdate()
     }
     
-    func applicationWillTerminate(application: UIApplication) {
-        
+    func didRollPhone() {
+        let alert = UIAlertController(title: "alert", message: nil, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "取消", style: .Cancel, handler: nil))
+        self.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
     }
 
-    
     func storeSegmentIndex() {
         let navigation = window!.rootViewController as! UINavigationController
-        
+
         let controller = navigation.viewControllers.first as! ViewController
         NSUserDefaults.standardUserDefaults().setInteger(Int(controller.segment.selectedSegmentIndex), forKey: segmentIndex)
         NSUserDefaults.standardUserDefaults().synchronize()
     }
 
 }
-

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D309FD821C45E2A70091C490 /* SwiftyTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309FD801C45E2A70091C490 /* SwiftyTime.swift */; };
+		D309FD831C45E2A70091C490 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309FD811C45E2A70091C490 /* SwiftyTimer.swift */; };
 		D32AE11F1C1544DC00EFDD69 /* TODO.md in Resources */ = {isa = PBXBuildFile; fileRef = D32AE11E1C1544DC00EFDD69 /* TODO.md */; };
 		D32AE1211C1599CB00EFDD69 /* BudgetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32AE1201C1599CB00EFDD69 /* BudgetHeaderView.swift */; };
 		D33BD26B1C12A5BA00FED00A /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BD26A1C12A5BA00FED00A /* TableHeaderView.swift */; };
@@ -27,6 +29,7 @@
 		D38253FA1C09715B00E26E6F /* XBConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253F91C09715B00E26E6F /* XBConstant.swift */; };
 		D38253FC1C097EFF00E26E6F /* XBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253FB1C097EFF00E26E6F /* XBTableViewController.swift */; };
 		D38253FE1C097F6200E26E6F /* XBTableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38253FD1C097F6200E26E6F /* XBTableViewRow.swift */; };
+		D396F5F71C420E5E004114EE /* RollPhoneDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D396F5F61C420E5E004114EE /* RollPhoneDetector.swift */; };
 		D399F9441C2E379400237D75 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D399F9431C2E379400237D75 /* CoreMotion.framework */; };
 		F8DA9A45528B1A04C1F484AA /* Pods_XiaoBai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E7B77AF8C8344CA20153A6 /* Pods_XiaoBai.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +38,8 @@
 		17D17DBA9968E53DE7E109CE /* Pods-XiaoBai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoBai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoBai/Pods-XiaoBai.debug.xcconfig"; sourceTree = "<group>"; };
 		77E7B77AF8C8344CA20153A6 /* Pods_XiaoBai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiaoBai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E2B3C8E160E545E586EED1 /* Pods-XiaoBai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoBai.release.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoBai/Pods-XiaoBai.release.xcconfig"; sourceTree = "<group>"; };
+		D309FD801C45E2A70091C490 /* SwiftyTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTime.swift; sourceTree = "<group>"; };
+		D309FD811C45E2A70091C490 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
 		D32AE11E1C1544DC00EFDD69 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		D32AE1201C1599CB00EFDD69 /* BudgetHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetHeaderView.swift; sourceTree = "<group>"; };
 		D33BD26A1C12A5BA00FED00A /* TableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 		D38253F91C09715B00E26E6F /* XBConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBConstant.swift; sourceTree = "<group>"; };
 		D38253FB1C097EFF00E26E6F /* XBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTableViewController.swift; sourceTree = "<group>"; };
 		D38253FD1C097F6200E26E6F /* XBTableViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTableViewRow.swift; sourceTree = "<group>"; };
+		D396F5F61C420E5E004114EE /* RollPhoneDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollPhoneDetector.swift; sourceTree = "<group>"; };
 		D399F9431C2E379400237D75 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -93,6 +99,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D309FD7F1C45E2A70091C490 /* SwiftyTimer */ = {
+			isa = PBXGroup;
+			children = (
+				D309FD801C45E2A70091C490 /* SwiftyTime.swift */,
+				D309FD811C45E2A70091C490 /* SwiftyTimer.swift */,
+			);
+			path = SwiftyTimer;
+			sourceTree = "<group>";
+		};
 		D3618CB41C1D761A0040C718 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +132,7 @@
 			children = (
 				D36E67321C0E7AB5006A32C5 /* XBWidthManager.swift */,
 				D3618CB91C1D78860040C718 /* UserCustomManager.swift */,
+				D396F5F61C420E5E004114EE /* RollPhoneDetector.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -183,6 +199,7 @@
 		D38253E31C0955B800E26E6F /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				D309FD7F1C45E2A70091C490 /* SwiftyTimer */,
 			);
 			path = 3rd;
 			sourceTree = "<group>";
@@ -352,11 +369,14 @@
 				D38253FC1C097EFF00E26E6F /* XBTableViewController.swift in Sources */,
 				D38253F61C09681E00E26E6F /* XBExpensesViewController.swift in Sources */,
 				D38253F81C09683800E26E6F /* XBIncomeViewController.swift in Sources */,
+				D309FD831C45E2A70091C490 /* SwiftyTimer.swift in Sources */,
+				D309FD821C45E2A70091C490 /* SwiftyTime.swift in Sources */,
 				D364349D1C01E179006931F4 /* AppDelegate.swift in Sources */,
 				D3618CBA1C1D78860040C718 /* UserCustomManager.swift in Sources */,
 				D36E67311C0B3C82006A32C5 /* XBBudgetCell.swift in Sources */,
 				D38253F11C09661A00E26E6F /* UIViewController+ChildControllerSwitch.m in Sources */,
 				D32AE1211C1599CB00EFDD69 /* BudgetHeaderView.swift in Sources */,
+				D396F5F71C420E5E004114EE /* RollPhoneDetector.swift in Sources */,
 				D36E67361C108C1A006A32C5 /* XBDragView.swift in Sources */,
 				D38253F41C09674E00E26E6F /* XBBudgetViewController.swift in Sources */,
 				D36434B51C01E423006931F4 /* XBNote.swift in Sources */,
