@@ -8,6 +8,7 @@ use_frameworks!
 
 target 'XiaoBai' do
 pod 'SnapKit', '~> 0.15.0'
-
+# Observable-Swift
+#https://github.com/ReactiveCocoa/ReactiveCocoa
 end
 
